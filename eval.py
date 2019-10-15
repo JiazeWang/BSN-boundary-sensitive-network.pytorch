@@ -3,8 +3,7 @@ import sys
 sys.path.append('./Evaluation')
 from eval_proposal import ANETproposal
 import matplotlib.pyplot as plt
-import matplotlib
-matplotlib.use('agg')
+plt.use('agg')
 import numpy as np
 
 def run_evaluation(ground_truth_filename, proposal_filename,
