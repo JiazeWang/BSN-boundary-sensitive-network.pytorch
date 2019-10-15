@@ -34,13 +34,13 @@ class TEM(torch.nn.Module):
             self.weight_init(m)
 
     def forward(self, x):
-        print "input.shape:", x.shape()
+        print "input.shape:", x.shape
         x = F.relu(self.conv1(x))
-        print "x1.shape:", x.shape()
+        print "x1.shape:", x.shape
         x = F.relu(self.conv2(x))
-        print "x2.shape:", x.shape()
+        print "x2.shape:", x.shape
         x = torch.sigmoid(0.01*self.conv3(x))
-        print "x.shape:", x.shape()
+        print "x.shape:", x.shape
         return x
 
 class PEM(torch.nn.Module):
