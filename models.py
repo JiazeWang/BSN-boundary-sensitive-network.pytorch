@@ -18,7 +18,7 @@ class TEM(torch.nn.Module):
         self.tem_best_loss = 10000000
         self.output_dim = 3
 
-        self.conv1 = torch.nn.Conv1d(in_channels=self.feat_dim,    out_channels=self.c_hidden,kernel_size=3,stride=1,padding=1,groups=1)
+        self.conv1 = torch.nn.Conv1d(in_channels=self.feat_dim, out_channels=self.c_hidden,kernel_size=3,stride=1,padding=1,groups=1)
         self.conv2 = torch.nn.Conv1d(in_channels=self.c_hidden,out_channels=self.c_hidden,kernel_size=3,stride=1,padding=1,groups=1)
         self.conv3 = torch.nn.Conv1d(in_channels=self.c_hidden,out_channels=self.output_dim,   kernel_size=1,stride=1,padding=0)
         self.reset_params()
